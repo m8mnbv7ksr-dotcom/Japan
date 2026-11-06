@@ -15,284 +15,99 @@
       --accent: #9c2025;
       --header-height: 72px;
     }
-
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; scroll-padding-top: var(--header-height); }
-    body {
-      margin: 0;
-      color: var(--ink);
-      background: var(--paper);
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.65;
-    }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: Arial, Helvetica, sans-serif; line-height: 1.65; }
     a { color: inherit; }
-
     .site-header {
-      position: fixed;
-      inset: 0 0 auto;
-      z-index: 20;
-      height: var(--header-height);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 5.5%;
-      color: white;
-      border-bottom: 1px solid rgba(255,255,255,.18);
-      transition: all .2s ease;
+      position: fixed; inset: 0 0 auto; z-index: 20; height: var(--header-height);
+      display: flex; align-items: center; justify-content: space-between; padding: 0 5.5%;
+      color: white; border-bottom: 1px solid rgba(255,255,255,.18); transition: all .2s ease;
     }
-    .site-header.scrolled {
-      color: var(--ink);
-      background: rgba(255,255,255,.96);
-      border-bottom-color: var(--line);
-      box-shadow: 0 3px 14px rgba(0,0,0,.05);
-    }
+    .site-header.scrolled { color: var(--ink); background: rgba(255,255,255,.96); border-bottom-color: var(--line); box-shadow: 0 3px 14px rgba(0,0,0,.05); }
     .brand { font-size: .95rem; font-weight: 700; text-decoration: none; }
     .nav { display: flex; align-items: center; gap: 32px; }
-    .nav a {
-      font-size: .9rem;
-      font-weight: 600;
-      text-decoration: none;
-    }
+    .nav a { font-size: .9rem; font-weight: 600; text-decoration: none; }
     .nav a:hover { text-decoration: underline; text-underline-offset: 6px; }
-    .menu-button {
-      display: none;
-      border: 0;
-      color: inherit;
-      background: transparent;
-      font-size: 1.65rem;
-      cursor: pointer;
-    }
-
+    .menu-button { display: none; border: 0; color: inherit; background: transparent; font-size: 1.65rem; cursor: pointer; }
     .hero {
-      min-height: 100svh;
-      display: flex;
-      align-items: flex-end;
-      position: relative;
-      color: white;
-      background:
-        linear-gradient(180deg, rgba(0,0,0,.20), rgba(0,0,0,.05) 42%, rgba(0,0,0,.78)),
+      min-height: 100svh; display: flex; align-items: flex-end; position: relative; color: white;
+      background: linear-gradient(180deg, rgba(0,0,0,.20), rgba(0,0,0,.05) 42%, rgba(0,0,0,.78)),
         url("https://images.unsplash.com/photo-1493819841864-9d91f1bd9f0b?auto=format&fit=crop&w=1800&q=80") center/cover no-repeat;
     }
-    .hero-content {
-      width: min(1120px, 89%);
-      margin: 0 auto;
-      padding: 150px 0 78px;
-    }
-    .eyebrow, .section-label {
-      margin: 0 0 12px;
-      font-size: .75rem;
-      font-weight: 700;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-    }
-    .hero h1 {
-      max-width: 800px;
-      margin: 0;
-      font-size: clamp(3.2rem, 8vw, 7rem);
-      line-height: .98;
-      letter-spacing: -.065em;
-    }
-    .hero-content > p:last-child {
-      max-width: 600px;
-      margin: 22px 0 0;
-      color: rgba(255,255,255,.88);
-      font-size: clamp(1rem, 1.5vw, 1.2rem);
-    }
-
+    .hero-content { width: min(1120px, 89%); margin: 0 auto; padding: 150px 0 78px; }
+    .eyebrow, .section-label { margin: 0 0 12px; font-size: .75rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+    .hero h1 { max-width: 800px; margin: 0; font-size: clamp(3.2rem, 8vw, 7rem); line-height: .98; letter-spacing: -.065em; }
+    .hero-content > p:last-child { max-width: 600px; margin: 22px 0 0; color: rgba(255,255,255,.88); font-size: clamp(1rem, 1.5vw, 1.2rem); }
     .section { padding: 100px 5.5%; }
     .section-inner { width: min(1120px, 100%); margin: 0 auto; }
     .section-label { color: var(--muted); }
-    h2 {
-      margin: 0;
-      font-size: clamp(2.2rem, 5vw, 4rem);
-      line-height: 1.08;
-      letter-spacing: -.055em;
-    }
-    .red-rule {
-      width: 40px;
-      height: 2px;
-      margin: 22px 0;
-      background: var(--accent);
-    }
-    .intro {
-      max-width: 710px;
-      color: var(--muted);
-      font-size: 1.08rem;
-    }
-
-    .facts {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-      margin-top: 40px;
-    }
-    .fact {
-      min-height: 190px;
-      padding: 26px 28px;
-      border-radius: 0 0 18px 18px;
-      background: var(--soft);
-    }
-    .fact-number {
-      color: #bfc1c5;
-      font-size: .78rem;
-      font-weight: 800;
-      letter-spacing: .15em;
-    }
+    h2 { margin: 0; font-size: clamp(2.2rem, 5vw, 4rem); line-height: 1.08; letter-spacing: -.055em; }
+    .red-rule { width: 40px; height: 2px; margin: 22px 0; background: var(--accent); }
+    .intro { max-width: 710px; color: var(--muted); font-size: 1.08rem; }
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 40px; }
+    .fact { min-height: 190px; padding: 26px 28px; border-radius: 0 0 18px 18px; background: var(--soft); }
+    .fact-number { color: #bfc1c5; font-size: .78rem; font-weight: 800; letter-spacing: .15em; }
     .fact h3 { margin: 18px 0 8px; font-size: 1.2rem; }
-    .fact p {
-      margin: 0;
-      color: var(--muted);
-      font-size: .95rem;
-    }
+    .fact p { margin: 0; color: var(--muted); font-size: .95rem; }
 
+    /* Give the three gallery photos a full-bleed, cinematic presence. */
     .photo-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 22px;
-      margin-top: 46px;
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px;
+      width: 100vw; margin: 56px 0 0 calc(50% - 50vw);
     }
-    .photo-card {
-      display: block;
-      border: 1px solid var(--line);
-      background: var(--soft);
-      overflow: hidden;
-    }
+    .photo-card { position: relative; min-width: 0; margin: 0; overflow: hidden; background: var(--soft); }
     .photo-card .photo {
-      min-height: 280px;
-      background-size: cover;
-      background-position: center;
+      min-height: clamp(460px, 68vh, 760px); height: 100%;
+      background-size: cover; background-position: center; transition: transform .6s ease;
     }
+    .photo-card:hover .photo { transform: scale(1.035); }
     .photo-card figcaption {
-      padding: 14px 16px 18px;
-      color: var(--muted);
-      font-size: .75rem;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      background: rgba(255,255,255,.6);
+      position: absolute; inset: auto 0 0; padding: 44px 24px 22px;
+      color: white; font-size: .78rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; background: linear-gradient(transparent, rgba(0,0,0,.65));
     }
-
-    .split {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      min-height: 570px;
-      background: var(--soft);
-    }
-    .split-image {
-      min-height: 420px;
-      background: url("https://unsplash.com/photos/uar_Zv6FcVA/download?force=true&w=1500") center/cover no-repeat;
-    }
-    .split-content {
-      display: flex;
-      align-items: center;
-      padding: 72px clamp(35px, 7vw, 100px);
-    }
+    .split { display: grid; grid-template-columns: 1fr 1fr; min-height: 570px; background: var(--soft); }
+    .split-image { min-height: 420px; background: url("https://unsplash.com/photos/uar_Zv6FcVA/download?force=true&w=1500") center/cover no-repeat; }
+    .split-content { display: flex; align-items: center; padding: 72px clamp(35px, 7vw, 100px); }
     .topic-list { width: 100%; margin-top: 34px; }
-    .topic-list a {
-      display: flex;
-      justify-content: space-between;
-      gap: 15px;
-      padding: 17px 0;
-      border-bottom: 1px solid #cfd0d2;
-      font-size: .94rem;
-      font-weight: 600;
-      text-decoration: none;
-      transition: color .2s ease, padding-left .2s ease;
-    }
-    .topic-list a:hover {
-      padding-left: 6px;
-      color: var(--accent);
-    }
+    .topic-list a { display: flex; justify-content: space-between; gap: 15px; padding: 17px 0; border-bottom: 1px solid #cfd0d2; font-size: .94rem; font-weight: 600; text-decoration: none; transition: color .2s ease, padding-left .2s ease; }
+    .topic-list a:hover { padding-left: 6px; color: var(--accent); }
     .arrow { color: var(--muted); }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      min-height: 480px;
-    }
-    .about-copy {
-      display: flex;
-      align-items: center;
-      padding: 72px 9%;
-    }
+    .about-grid { display: grid; grid-template-columns: .9fr 1.1fr; min-height: 480px; }
+    .about-copy { display: flex; align-items: center; padding: 72px 9%; }
     .about-copy p { max-width: 470px; color: var(--muted); }
-    .about-photo {
-      min-height: 400px;
-      background: url("https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?auto=format&fit=crop&w=1500&q=85") center/cover no-repeat;
-    }
-
+    .about-photo { min-height: 400px; background: url("https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?auto=format&fit=crop&w=1500&q=85") center/cover no-repeat; }
     .process-section { background: #f7f7f7; }
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-      margin-top: 38px;
-    }
-    .process-card {
-      padding: 28px;
-      background: white;
-      border: 1px solid #e8e8e9;
-      scroll-margin-top: 90px;
-    }
-    .process-card span {
-      color: var(--accent);
-      font-size: .75rem;
-      font-weight: 800;
-      letter-spacing: .14em;
-    }
+    .process-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 38px; }
+    .process-card { padding: 28px; background: white; border: 1px solid #e8e8e9; scroll-margin-top: 90px; }
+    .process-card span { color: var(--accent); font-size: .75rem; font-weight: 800; letter-spacing: .14em; }
     .process-card h3 { margin: 12px 0 8px; font-size: 1.25rem; }
     .process-card p { margin: 0; color: var(--muted); }
-
     .references { padding-top: 76px; padding-bottom: 76px; }
     .references p { max-width: 700px; color: var(--muted); }
-    .reference-list {
-      display: grid;
-      gap: 12px;
-      margin-top: 26px;
-    }
-    .reference-list a {
-      color: var(--ink);
-      text-underline-offset: 4px;
-    }
+    .reference-list { display: grid; gap: 12px; margin-top: 26px; }
+    .reference-list a { color: var(--ink); text-underline-offset: 4px; }
     .reference-list a:hover { color: var(--accent); }
-
-    footer {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 28px 5.5%;
-      color: #777;
-      border-top: 1px solid var(--line);
-      font-size: .85rem;
-    }
-
+    footer { display: flex; justify-content: space-between; gap: 20px; padding: 28px 5.5%; color: #777; border-top: 1px solid var(--line); font-size: .85rem; }
     @media (max-width: 760px) {
       :root { --header-height: 64px; }
       .site-header { padding: 0 6%; }
       .menu-button { display: block; }
-      .nav {
-        display: none;
-        position: absolute;
-        top: var(--header-height);
-        left: 0;
-        right: 0;
-        padding: 20px 6% 24px;
-        background: white;
-        color: var(--ink);
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 18px;
-      }
+      .nav { display: none; position: absolute; top: var(--header-height); left: 0; right: 0; padding: 20px 6% 24px; background: white; color: var(--ink); flex-direction: column; align-items: flex-start; gap: 18px; }
       .nav.open { display: flex; }
       .hero-content { padding-bottom: 54px; }
       .section { padding: 72px 6%; }
       .facts, .photo-grid, .split, .about-grid, .process-grid { grid-template-columns: 1fr; }
       .fact { min-height: auto; }
+      .photo-grid { gap: 8px; margin-top: 42px; }
+      .photo-card .photo { min-height: 76svh; }
+      .photo-card figcaption { padding: 44px 20px 20px; }
       .split-image { min-height: 340px; }
       .split-content, .about-copy { padding: 60px 8%; }
       .about-photo { min-height: 350px; }
       footer { flex-direction: column; }
     }
-
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       *, *::before, *::after { transition-duration: .01ms !important; }
@@ -304,168 +119,83 @@
     <a class="brand" href="#home">Hayase Kobayashi</a>
     <button class="menu-button" id="menuButton" aria-label="Open navigation" aria-expanded="false">☰</button>
     <nav class="nav" id="nav" aria-label="Main navigation">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#earth-processes">Earth Processes</a>
-      <a href="#references">References</a>
+      <a href="#home">Home</a><a href="#about">About</a><a href="#earth-processes">Earth Processes</a><a href="#references">References</a>
     </nav>
   </header>
-
   <main>
-    <section class="hero" id="home">
-      <div class="hero-content">
-        <p class="eyebrow">Earth Science Academic Portfolio</p>
-        <h1>Explore the<br>Wonders of Japan</h1>
-        <p>A scientific exploration of the active island nation.</p>
+    <section class="hero" id="home"><div class="hero-content">
+      <p class="eyebrow">Earth Science Academic Portfolio</p>
+      <h1>Explore the<br>Wonders of Japan</h1>
+      <p>A scientific exploration of the active island nation.</p>
+    </div></section>
+    <section class="section" id="overview"><div class="section-inner">
+      <p class="section-label">01 — Overview</p>
+      <h2>A country shaped by<br>Earth and time</h2><div class="red-rule"></div>
+      <p class="intro">Japan’s landscapes tell a story of moving plates, powerful volcanoes, changing climates, and deep cultural history. Explore how Earth’s systems shape life across this remarkable island nation.</p>
+      <div class="facts">
+        <article class="fact"><span class="fact-number">01</span><h3>History</h3><p>Japan has a rich history shaped by centuries of change, landscape, and human connection.</p></article>
+        <article class="fact"><span class="fact-number">02</span><h3>Tectonic Activity</h3><p>Earthquakes and volcanoes reveal the ongoing movement beneath the Japanese islands.</p></article>
+        <article class="fact"><span class="fact-number">03</span><h3>Culture</h3><p>From Hokkaido to Okinawa, climate and mountainous terrain influence regional life and culture.</p></article>
       </div>
-    </section>
-
-    <section class="section" id="overview">
-      <div class="section-inner">
-        <p class="section-label">01 — Overview</p>
-        <h2>A country shaped by<br>Earth and time</h2>
-        <div class="red-rule"></div>
-        <p class="intro">Japan’s landscapes tell a story of moving plates, powerful volcanoes, changing climates, and deep cultural history. Explore how Earth’s systems shape life across this remarkable island nation.</p>
-
-        <div class="facts">
-          <article class="fact">
-            <span class="fact-number">01</span>
-            <h3>History</h3>
-            <p>Japan has a rich history shaped by centuries of change, landscape, and human connection.</p>
-          </article>
-          <article class="fact">
-            <span class="fact-number">02</span>
-            <h3>Tectonic Activity</h3>
-            <p>Earthquakes and volcanoes reveal the ongoing movement beneath the Japanese islands.</p>
-          </article>
-          <article class="fact">
-            <span class="fact-number">03</span>
-            <h3>Culture</h3>
-            <p>From Hokkaido to Okinawa, climate and mountainous terrain influence regional life and culture.</p>
-          </article>
-        </div>
-
-        <div class="photo-grid" aria-label="Japan photography gallery">
-          <figure class="photo-card">
-            <div class="photo" style="background-image:url('https://unsplash.com/photos/n--CMLApjfI/download?force=true&w=1200');"></div>
-            <figcaption>Temple &amp; mountain</figcaption>
-          </figure>
-          <figure class="photo-card">
-            <div class="photo" style="background-image:url('https://unsplash.com/photos/KO6jQI-qdMU/download?force=true&w=1200');"></div>
-            <figcaption>Red shrine</figcaption>
-          </figure>
-          <figure class="photo-card">
-            <div class="photo" style="background-image:url('https://unsplash.com/photos/hwLAI5lRhdM/download?force=true&w=1200');"></div>
-            <figcaption>Urban street</figcaption>
-          </figure>
-        </div>
+      <div class="photo-grid" aria-label="Japan photography gallery">
+        <figure class="photo-card"><div class="photo" style="background-image:url('https://unsplash.com/photos/n--CMLApjfI/download?force=true&w=1600');"></div><figcaption>Temple &amp; mountain</figcaption></figure>
+        <figure class="photo-card"><div class="photo" style="background-image:url('https://unsplash.com/photos/KO6jQI-qdMU/download?force=true&w=1600');"></div><figcaption>Red shrine</figcaption></figure>
+        <figure class="photo-card"><div class="photo" style="background-image:url('https://unsplash.com/photos/hwLAI5lRhdM/download?force=true&w=1600');"></div><figcaption>Urban street</figcaption></figure>
       </div>
-    </section>
-
+    </div></section>
     <section class="split" id="earth-processes">
       <div class="split-image" role="img" aria-label="People gathered in front of a Japanese food counter"></div>
-      <div class="split-content">
-        <div>
-          <p class="section-label">02 — Earth Processes</p>
-          <h2>Explore the Science</h2>
-          <div class="red-rule"></div>
-          <div class="topic-list">
-            <a href="#maps">Maps, Location &amp; Cartographers <span class="arrow">→</span></a>
-            <a href="#tectonics">Plate Tectonics, Earthquakes &amp; Volcanoes <span class="arrow">→</span></a>
-            <a href="#weathering">Weathering, Mass Wasting &amp; Erosion <span class="arrow">→</span></a>
-            <a href="#water">Fluvial Processes, Oceans &amp; Coastlines <span class="arrow">→</span></a>
-            <a href="#climate">Climate Controls, Biomes &amp; Climate Change <span class="arrow">→</span></a>
-          </div>
+      <div class="split-content"><div>
+        <p class="section-label">02 — Earth Processes</p><h2>Explore the Science</h2><div class="red-rule"></div>
+        <div class="topic-list">
+          <a href="#maps">Maps, Location &amp; Cartographers <span class="arrow">→</span></a>
+          <a href="#tectonics">Plate Tectonics, Earthquakes &amp; Volcanoes <span class="arrow">→</span></a>
+          <a href="#weathering">Weathering, Mass Wasting &amp; Erosion <span class="arrow">→</span></a>
+          <a href="#water">Fluvial Processes, Oceans &amp; Coastlines <span class="arrow">→</span></a>
+          <a href="#climate">Climate Controls, Biomes &amp; Climate Change <span class="arrow">→</span></a>
         </div>
-      </div>
+      </div></div>
     </section>
-
     <section class="about-grid" id="about">
-      <div class="about-copy">
-        <div>
-          <p class="section-label">03 — Overview</p>
-          <h2>My connection<br>to Japan</h2>
-          <div class="red-rule"></div>
-          <p>I chose Japan because of its unique landscapes and dynamic geology. The country’s location near several tectonic plate boundaries makes it one of the most geologically active places on Earth. Studying Japan deepened my interest in how natural forces shape both physical geography and human society.</p>
-        </div>
-      </div>
+      <div class="about-copy"><div><p class="section-label">03 — Overview</p><h2>My connection<br>to Japan</h2><div class="red-rule"></div>
+        <p>I chose Japan because of its unique landscapes and dynamic geology. The country’s location near several tectonic plate boundaries makes it one of the most geologically active places on Earth. Studying Japan deepened my interest in how natural forces shape both physical geography and human society.</p>
+      </div></div>
       <div class="about-photo" role="img" aria-label="Mountain landscape in Japan"></div>
     </section>
-
-    <section class="section process-section">
-      <div class="section-inner">
-        <p class="section-label">04 — Field Notes</p>
-        <h2>Earth in motion</h2>
-        <div class="red-rule"></div>
-        <div class="process-grid">
-          <article class="process-card" id="maps">
-            <span>01 — PLACE</span>
-            <h3>Maps, Location &amp; Cartographers</h3>
-            <p>Maps help us understand Japan’s position in the Pacific and the varied landscapes created by uplift, deposition, and oceanic influence.</p>
-          </article>
-          <article class="process-card" id="tectonics">
-            <span>02 — FORCES</span>
-            <h3>Plate Tectonics, Earthquakes &amp; Volcanoes</h3>
-            <p>Interactions between tectonic plates contribute to Japan’s earthquakes, volcanic arcs, and mountain building across the archipelago.</p>
-          </article>
-          <article class="process-card" id="weathering">
-            <span>03 — CHANGE</span>
-            <h3>Weathering, Mass Wasting &amp; Erosion</h3>
-            <p>Rain, temperature changes, gravity, and flowing water break down rock and shape steep valleys, slopes, and sediment transport pathways.</p>
-          </article>
-          <article class="process-card" id="water">
-            <span>04 — WATER</span>
-            <h3>Fluvial Processes, Oceans &amp; Coastlines</h3>
-            <p>Rivers transport sediment from highlands to the sea, while waves and coastal currents reshape beaches, deltas, and harbors.</p>
-          </article>
-          <article class="process-card" id="climate">
-            <span>05 — CLIMATE</span>
-            <h3>Climate Controls, Biomes &amp; Climate Change</h3>
-            <p>Latitude, elevation, seasonal winds, and ocean currents influence Japan’s climate zones, ecosystems, and vulnerability to environmental change.</p>
-          </article>
-        </div>
+    <section class="section process-section"><div class="section-inner">
+      <p class="section-label">04 — Field Notes</p><h2>Earth in motion</h2><div class="red-rule"></div>
+      <div class="process-grid">
+        <article class="process-card" id="maps"><span>01 — PLACE</span><h3>Maps, Location &amp; Cartographers</h3><p>Maps help us understand Japan’s position in the Pacific and the varied landscapes created by uplift, deposition, and oceanic influence.</p></article>
+        <article class="process-card" id="tectonics"><span>02 — FORCES</span><h3>Plate Tectonics, Earthquakes &amp; Volcanoes</h3><p>Interactions between tectonic plates contribute to Japan’s earthquakes, volcanic arcs, and mountain building across the archipelago.</p></article>
+        <article class="process-card" id="weathering"><span>03 — CHANGE</span><h3>Weathering, Mass Wasting &amp; Erosion</h3><p>Rain, temperature changes, gravity, and flowing water break down rock and shape steep valleys, slopes, and sediment transport pathways.</p></article>
+        <article class="process-card" id="water"><span>04 — WATER</span><h3>Fluvial Processes, Oceans &amp; Coastlines</h3><p>Rivers transport sediment from highlands to the sea, while waves and coastal currents reshape beaches, deltas, and harbors.</p></article>
+        <article class="process-card" id="climate"><span>05 — CLIMATE</span><h3>Climate Controls, Biomes &amp; Climate Change</h3><p>Latitude, elevation, seasonal winds, and ocean currents influence Japan’s climate zones, ecosystems, and vulnerability to environmental change.</p></article>
       </div>
-    </section>
-
-    <section class="section references" id="references">
-      <div class="section-inner">
-        <p class="section-label">05 — Further Reading</p>
-        <h2>References</h2>
-        <div class="red-rule"></div>
-        <p>Use these organizations as starting points for research. Add the specific articles, maps, and publication details you used for your project.</p>
-        <div class="reference-list">
-          <a href="https://www.jma.go.jp/jma/en/" target="_blank" rel="noopener noreferrer">Japan Meteorological Agency — Earthquakes, volcanoes, and climate information</a>
-          <a href="https://www.gsi.go.jp/ENGLISH/" target="_blank" rel="noopener noreferrer">Geospatial Information Authority of Japan — Maps and geographic information</a>
-          <a href="https://www.usgs.gov/" target="_blank" rel="noopener noreferrer">United States Geological Survey — Earth science research and resources</a>
-          <a href="https://volcano.si.edu/" target="_blank" rel="noopener noreferrer">Smithsonian Global Volcanism Program — Volcano information</a>
-        </div>
+    </div></section>
+    <section class="section references" id="references"><div class="section-inner">
+      <p class="section-label">05 — Further Reading</p><h2>References</h2><div class="red-rule"></div>
+      <p>Use these organizations as starting points for research. Add the specific articles, maps, and publication details you used for your project.</p>
+      <div class="reference-list">
+        <a href="https://www.jma.go.jp/jma/en/" target="_blank" rel="noopener noreferrer">Japan Meteorological Agency — Earthquakes, volcanoes, and climate information</a>
+        <a href="https://www.gsi.go.jp/ENGLISH/" target="_blank" rel="noopener noreferrer">Geospatial Information Authority of Japan — Maps and geographic information</a>
+        <a href="https://www.usgs.gov/" target="_blank" rel="noopener noreferrer">United States Geological Survey — Earth science research and resources</a>
+        <a href="https://volcano.si.edu/" target="_blank" rel="noopener noreferrer">Smithsonian Global Volcanism Program — Volcano information</a>
       </div>
-    </section>
+    </div></section>
   </main>
-
-  <footer>
-    <span>Earth Science Academic Portfolio · Hayase Kobayashi</span>
-    <span>Photography: <a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">Unsplash</a></span>
-  </footer>
-
+  <footer><span>Earth Science Academic Portfolio · Hayase Kobayashi</span><span>Photography: <a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">Unsplash</a></span></footer>
   <script>
     const header = document.getElementById("header");
     const menuButton = document.getElementById("menuButton");
     const nav = document.getElementById("nav");
-
-    function updateHeader() {
-      header.classList.toggle("scrolled", window.scrollY > 24);
-    }
-
+    function updateHeader() { header.classList.toggle("scrolled", window.scrollY > 24); }
     updateHeader();
     window.addEventListener("scroll", updateHeader, { passive: true });
-
     menuButton.addEventListener("click", () => {
       const isOpen = nav.classList.toggle("open");
       menuButton.setAttribute("aria-expanded", String(isOpen));
       menuButton.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
     });
-
     nav.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
       nav.classList.remove("open");
       menuButton.setAttribute("aria-expanded", "false");
