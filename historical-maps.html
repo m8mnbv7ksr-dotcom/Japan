@@ -3,71 +3,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Explore four historical maps of Japan, with map images and collection references.">
-  <title>Historical Maps of Japan</title>
+  <meta name="description" content="Explore historical maps of Japan, from Edo-period regional maps to historic plans of Tokyo, with images and collection sources.">
+  <meta name="theme-color" content="#171915">
+  <title>Historical Maps of Japan | Hayase Kobayashi</title>
   <style>
-    :root{color-scheme:light;--ink:#20211d;--muted:#696b64;--paper:#fbfaf7;--soft:#f1efe9;--line:#dedbd2;--accent:#a3332d}
-    *{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--paper);font:16px/1.65 Arial,Helvetica,sans-serif}a{color:var(--accent)}header,main,footer{width:min(1080px,90%);margin-inline:auto}header{padding:64px 0 34px;border-bottom:1px solid var(--line)}header p,.eyebrow{color:var(--muted);text-transform:uppercase;letter-spacing:.12em;font-size:.8rem}h1{font-size:clamp(2.4rem,6vw,4.5rem);line-height:1.05;margin:.25em 0}h2{font-size:1.55rem;line-height:1.2;margin:0 0 .65rem}main{padding:38px 0 72px}.intro{max-width:760px;color:var(--muted);margin:0 0 32px}.maps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.map-card{overflow:hidden;background:white;border:1px solid var(--line);border-radius:8px}.map-image-link{display:block;height:300px;background:var(--soft);overflow:hidden}.map-image{display:block;width:100%;height:100%;object-fit:contain;transition:transform .35s ease}.map-image-link:hover .map-image{transform:scale(1.025)}.map-copy{padding:24px 26px}.map-copy .eyebrow{margin-top:0}.map-copy p{margin:.65rem 0}.date{color:var(--muted);font-size:.94rem}.map-link{display:inline-block;margin-top:.5rem;font-weight:700}.references{margin-top:54px;padding-top:30px;border-top:1px solid var(--line)}.references li{padding:0 0 14px 6px;overflow-wrap:anywhere}.references p:last-child{color:var(--muted)}footer{padding:22px 0 40px;color:var(--muted);border-top:1px solid var(--line);font-size:.9rem}@media(max-width:680px){.maps{grid-template-columns:1fr}.map-image-link{height:260px}header{padding-top:42px}}@media(prefers-reduced-motion:reduce){.map-image{transition:none}}
+    :root{color-scheme:light;--ink:#20211d;--muted:#696b64;--paper:#fbfaf7;--soft:#f1efe9;--line:#dedbd2;--accent:#a3332d;--dark:#20211d}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;color:var(--ink);background:var(--paper);font:16px/1.65 Arial,Helvetica,sans-serif}
+    a{color:inherit}
+    .topbar{height:68px;padding:0 6%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);background:rgba(251,250,247,.96)}
+    .brand{font-size:.92rem;font-weight:700;text-decoration:none}
+    .back-link{font-size:.88rem;text-decoration:none;color:var(--muted)}
+    .back-link:hover,.source-link:hover{color:var(--accent)}
+    .hero{padding:76px 6% 68px;background:var(--dark);color:white}
+    .hero-inner,main{width:min(1120px,100%);margin:0 auto}
+    .eyebrow{margin:0 0 12px;color:#b9b7ac;font-size:.74rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+    h1{max-width:780px;margin:0;font-size:clamp(2.7rem,7vw,5.3rem);line-height:1.02;letter-spacing:-.06em}
+    .hero-intro{max-width:680px;margin:22px 0 0;color:#e0ded6;font-size:1.05rem}
+    main{padding:52px 0 80px}
+    .intro{max-width:760px;margin:0 0 32px;padding:0 24px;color:var(--muted)}
+    .map-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;padding:0 24px}
+    .map-card{overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:8px}
+    .map-image-link{display:block;height:360px;overflow:hidden;background:#e9e6de}
+    .map-image{display:block;width:100%;height:100%;object-fit:contain;transition:transform .35s ease}
+    .map-image-link:hover .map-image{transform:scale(1.025)}
+    .map-copy{padding:23px 25px 26px}
+    .map-copy .eyebrow{color:var(--accent);margin-bottom:7px}
+    h2{margin:0 0 8px;font-size:1.45rem;line-height:1.25;letter-spacing:-.025em}
+    .date{margin:0 0 12px;color:var(--muted);font-size:.9rem}
+    .map-copy p:not(.eyebrow):not(.date){margin:0 0 16px;color:#55574f;font-size:.95rem}
+    .source-link{color:var(--accent);font-size:.9rem;font-weight:700;text-decoration-thickness:1px;text-underline-offset:4px}
+    .note{margin:44px 24px 0;padding:24px 26px;background:var(--soft);border-left:3px solid var(--accent);color:var(--muted)}
+    .note strong{color:var(--ink)}
+    footer{padding:24px 6%;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
+    @media(max-width:700px){.hero{padding:58px 6% 52px}main{padding-top:36px}.map-grid{grid-template-columns:1fr;padding:0 18px;gap:16px}.intro{padding:0 18px}.map-image-link{height:300px}.note{margin:32px 18px 0}.topbar{padding:0 5%}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
   </style>
 </head>
 <body>
-  <header>
-    <p>Historical Cartography</p>
-    <h1>Historical Maps of Japan</h1>
-    <p>Maps offer a glimpse into how Japan was surveyed, represented, and understood across different periods.</p>
+  <nav class="topbar" aria-label="Page navigation">
+    <a class="brand" href="index.html">Hayase Kobayashi</a>
+    <a class="back-link" href="index.html#earth-processes">← Back to Earth Processes</a>
+  </nav>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Historical Cartography · Japan</p>
+      <h1>Historical Maps<br>of Japan</h1>
+      <p class="hero-intro">Explore how Japan and its cities were mapped across time—from an Edo-period map of the country to detailed plans of Edo, today’s Tokyo.</p>
+    </div>
   </header>
   <main>
-    <p class="intro">Explore four maps and their collection records. Each card displays a map image; select an image to open its digitized collection record. Dates and attributions follow the collection information where available.</p>
-    <section class="maps" aria-label="Historical maps">
+    <p class="intro">These digitized maps reveal changing ideas about Japan’s geography, travel routes, regional boundaries, and city life. Select a map image or source link to view the original collection record.</p>
+    <section class="map-grid" aria-label="Historical map collection">
       <article class="map-card">
-        <a class="map-image-link" href="https://www.loc.gov/item/2021668272/" target="_blank" rel="noopener noreferrer" aria-label="Open the Library of Congress record for the 1687 map">
-          <img class="map-image" src="https://tile.loc.gov/image-services/iiif/service:gmd:gmd8:g7969t:ct003383/full/800,/0/default.jpg" alt="Historical Japanese map from 1687, showing regional divisions and routes" loading="lazy">
+        <a class="map-image-link" href="https://www.loc.gov/item/2021668272/" target="_blank" rel="noopener noreferrer" aria-label="View the 1687 map of Japan at the Library of Congress">
+          <img class="map-image" src="https://tile.loc.gov/image-services/iiif/service:gmd:gmd8:g7969t:ct003383/full/800,/0/default.jpg" alt="Hand-drawn Japanese map from 1687 showing regions and routes" loading="lazy">
         </a>
         <div class="map-copy"><p class="eyebrow">01 · Edo period</p><h2>Japanese Map from 1687</h2>
-        <p class="date"><i>Nihon kaisan chōrikuzu</i> (also known as <i>Nihon ōezu</i> or <i>Dai Nihonkoku no zu</i>)</p>
-        <p>Made in Japan in 1687, this map depicts the country's regions, roads, and important towns. It also records information about local rulers, offering insight into how people in Japan understood their country during the Edo period.</p>
-        <a class="map-link" href="https://www.loc.gov/item/2021668272/" target="_blank" rel="noopener noreferrer">View map and source — Library of Congress</a></div>
+          <p class="date"><i>Nihon kaisan chōrikuzu</i></p>
+          <p>Made in Japan, this map depicts the country’s regions, roads, and important towns, offering a glimpse of how Japan was understood during the Edo period.</p>
+          <a class="source-link" href="https://www.loc.gov/item/2021668272/" target="_blank" rel="noopener noreferrer">View map and collection record — Library of Congress ↗</a>
+        </div>
       </article>
       <article class="map-card">
-        <a class="map-image-link" href="https://www.loc.gov/resource/g7960m.gct00032/?sp=64" target="_blank" rel="noopener noreferrer" aria-label="Open Inō Tadataka's map at the Library of Congress">
-          <img class="map-image" src="https://tile.loc.gov/image-services/iiif/service:gmd:gmd8:g7960m:gct00032/full/800,/0/default.jpg" alt="Sheet from Inō Tadataka's detailed map of Japan" loading="lazy">
+        <a class="map-image-link" href="https://www.loc.gov/resource/g7960m.gct00032/?sp=64" target="_blank" rel="noopener noreferrer" aria-label="View Inō Tadataka's map at the Library of Congress">
+          <img class="map-image" src="https://tile.loc.gov/image-services/iiif/service:gmd:gmd8:g7960m:gct00032/full/800,/0/default.jpg" alt="Digitized sheet from Inō Tadataka’s detailed map of Japan" loading="lazy">
         </a>
-        <div class="map-copy"><p class="eyebrow">02 · Surveying Japan</p><h2>Inō Tadataka’s Map of Japan (1821)</h2>
-        <p class="date">Survey work completed in the early 19th century; the map was presented to the shogunate in 1821.</p>
-        <p>Surveyor Inō Tadataka and his team traveled around Japan and measured the land and coastline. Their observations were used to produce detailed maps, among the most accurate representations of Japan at the time.</p>
-        <a class="map-link" href="https://www.loc.gov/resource/g7960m.gct00032/?sp=64" target="_blank" rel="noopener noreferrer">View digitized map and source — Library of Congress</a></div>
+        <div class="map-copy"><p class="eyebrow">02 · Surveying Japan</p><h2>Inō Tadataka’s Map of Japan</h2>
+          <p class="date">Surveyed in the early 19th century; presented in 1821</p>
+          <p>Inō Tadataka and his team traveled around Japan to measure the land and coastline. Their survey produced some of the most accurate maps of Japan of its time.</p>
+          <a class="source-link" href="https://www.loc.gov/resource/g7960m.gct00032/?sp=64" target="_blank" rel="noopener noreferrer">View digitized map — Library of Congress ↗</a>
+        </div>
       </article>
       <article class="map-card">
-        <a class="map-image-link" href="https://commons.wikimedia.org/wiki/File:1850_Edo_Period_Woodcut_Map_of_Edo_or_Tokyo,_Japan_-_Geographicus_-_EdoSm-japan-1850.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open the Wikimedia Commons record for the Edo map">
-          <img class="map-image" src="https://upload.wikimedia.org/wikipedia/commons/7/7b/1850_Edo_Period_Woodcut_Map_of_Edo_or_Tokyo%2C_Japan_-_Geographicus_-_EdoSm-japan-1850.jpg" alt="Woodcut street map of Edo, present-day Tokyo, circa 1850" loading="lazy">
+        <a class="map-image-link" href="https://commons.wikimedia.org/wiki/File:1752_Schely_Plan_or_Map_of_Edo_or_Tokyo,_Japan_-_Geographicus_-_EdoTokyo-schley-1752.jpg" target="_blank" rel="noopener noreferrer" aria-label="View the circa 1752 plan of Edo at Wikimedia Commons">
+          <img class="map-image" src="https://upload.wikimedia.org/wikipedia/commons/7/7b/1752_Schely_Plan_or_Map_of_Edo_or_Tokyo%2C_Japan_-_Geographicus_-_EdoTokyo-schley-1752.jpg" alt="Historic plan of Edo, present-day Tokyo, circa 1752" loading="lazy">
         </a>
-        <div class="map-copy"><p class="eyebrow">03 · City map</p><h2>Map of Edo, circa 1850</h2>
-        <p class="date">Edo (present-day Tokyo), Japan</p>
-        <p>This woodcut map depicts Edo’s streets, neighborhoods, and notable places near the end of the Edo period. It offers a view of the city’s layout before Edo became Tokyo.</p>
-        <a class="map-link" href="https://commons.wikimedia.org/wiki/File:1850_Edo_Period_Woodcut_Map_of_Edo_or_Tokyo,_Japan_-_Geographicus_-_EdoSm-japan-1850.jpg" target="_blank" rel="noopener noreferrer">View image, license, and source — Wikimedia Commons</a></div>
+        <div class="map-copy"><p class="eyebrow">03 · City plan</p><h2>Plan of Edo, circa 1752</h2>
+          <p class="date">Edo (present-day Tokyo), Japan</p>
+          <p>This historic city plan offers a view of Edo’s urban layout during the middle of the Edo period, when the city was the shogunate’s political center.</p>
+          <a class="source-link" href="https://commons.wikimedia.org/wiki/File:1752_Schely_Plan_or_Map_of_Edo_or_Tokyo,_Japan_-_Geographicus_-_EdoTokyo-schley-1752.jpg" target="_blank" rel="noopener noreferrer">View image, details, and license — Wikimedia Commons ↗</a>
+        </div>
       </article>
       <article class="map-card">
-        <a class="map-image-link" href="https://digitalcollections.nypl.org/items/043acaf0-0a8c-013f-4b6f-0242ac110004" target="_blank" rel="noopener noreferrer" aria-label="Open the New York Public Library record for the European map of Japan">
-          <img class="map-image" src="https://images.nypl.org/index.php?id=5783744&t=w" alt="European map depicting Japan by Frederik de Wit" loading="lazy">
+        <a class="map-image-link" href="https://commons.wikimedia.org/wiki/File:1849_Edo_Period_Japanese_Woodcut_Map_of_Edo_or_Tokyo_Japan_-_Geographicus_-_Edo-japan-1849.jpg" target="_blank" rel="noopener noreferrer" aria-label="View the 1849 woodcut map of Edo at Wikimedia Commons">
+          <img class="map-image" src="https://upload.wikimedia.org/wikipedia/commons/3/32/1849_Edo_Period_Japanese_Woodcut_Map_of_Edo_or_Tokyo_Japan_-_Geographicus_-_Edo-japan-1849.jpg" alt="Japanese woodcut street map of Edo from 1849" loading="lazy">
         </a>
-        <div class="map-copy"><p class="eyebrow">04 · European cartography</p><h2>European Map of Japan</h2>
-        <p class="date">Frederik de Wit, circa 1620–1680</p>
-        <p>European mapmakers drew on travelers’ accounts and other sources to depict Japan. Some details were inaccurate, but these maps show how Japan was understood in Europe during this period.</p>
-        <a class="map-link" href="https://digitalcollections.nypl.org/items/043acaf0-0a8c-013f-4b6f-0242ac110004" target="_blank" rel="noopener noreferrer">View map image and source — New York Public Library</a></div>
+        <div class="map-copy"><p class="eyebrow">04 · Woodblock cartography</p><h2>Woodcut Map of Edo, 1849</h2>
+          <p class="date">Late Edo period · Edo (Tokyo)</p>
+          <p>This Japanese woodcut map shows the city’s streets and neighborhoods near the end of the Edo period, before Edo was renamed Tokyo.</p>
+          <a class="source-link" href="https://commons.wikimedia.org/wiki/File:1849_Edo_Period_Japanese_Woodcut_Map_of_Edo_or_Tokyo_Japan_-_Geographicus_-_Edo-japan-1849.jpg" target="_blank" rel="noopener noreferrer">View image, details, and license — Wikimedia Commons ↗</a>
+        </div>
       </article>
     </section>
-    <section class="references" aria-labelledby="references-heading">
-      <p class="eyebrow">Further reading</p>
-      <h2 id="references-heading">References</h2>
-      <ol>
-        <li>Ishikawa, T. (1687). <i>Outline map of Japan</i> [Map]. Library of Congress. <a href="https://www.loc.gov/item/2021668272/" target="_blank" rel="noopener noreferrer">https://www.loc.gov/item/2021668272/</a></li>
-        <li>Inō, T. (1873). <i>Maps of the Japanese coastal areas (Ino Maps)</i> [Map]. Library of Congress. <a href="https://www.loc.gov/item/2021668271/" target="_blank" rel="noopener noreferrer">https://www.loc.gov/item/2021668271/</a></li>
-        <li>Wikimedia Commons. (n.d.). <i>1850 Edo period woodcut map of Edo or Tokyo, Japan</i> [Map]. <a href="https://commons.wikimedia.org/wiki/File:1850_Edo_Period_Woodcut_Map_of_Edo_or_Tokyo,_Japan_-_Geographicus_-_EdoSm-japan-1850.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons file page</a></li>
-        <li>The New York Public Library. (n.d.). <i>Japan</i> [Map by Frederik de Wit, circa 1620–1680]. NYPL Digital Collections. <a href="https://digitalcollections.nypl.org/items/043acaf0-0a8c-013f-4b6f-0242ac110004" target="_blank" rel="noopener noreferrer">NYPL Digital Collections item</a></li>
-      </ol>
-      <p>For classroom or research use, check each collection record for its preferred citation, image-use terms, and the exact date or attribution associated with the item.</p>
-    </section>
+    <aside class="note"><strong>Using these images:</strong> The Library of Congress and Wikimedia Commons records provide the source details and rights information for each map. Please check the individual record before reusing or publishing an image.</aside>
   </main>
-  <footer>Historical Maps of Japan · Collection links open in a new tab.</footer>
+  <footer>Historical Maps of Japan · Map images link to their digitized collection records.</footer>
 </body>
 </html>
