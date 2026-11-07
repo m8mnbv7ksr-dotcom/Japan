@@ -8,20 +8,24 @@
   <title>Hayase Kobayashi | Explore Japan</title>
   <style>
     :root{--ink:#20211d;--muted:#696b64;--paper:#fbfaf7;--soft:#f1efe9;--line:#dedbd2;--accent:#a3332d;--header-height:72px}
-    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:var(--header-height)}body{margin:0;color:var(--ink);background:var(--paper);font-family:Arial,Helvetica,sans-serif;line-height:1.65}a{color:inherit}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:var(--header-height)}
+    body{margin:0;color:var(--ink);background:var(--paper);font-family:Arial,Helvetica,sans-serif;line-height:1.65}
+    a{color:inherit}
     .site-header{position:fixed;inset:0 0 auto;z-index:20;height:var(--header-height);display:flex;align-items:center;justify-content:space-between;padding:0 5.5%;color:white;border-bottom:1px solid rgba(255,255,255,.15);background:rgba(21,24,19,.18);backdrop-filter:blur(8px)}
     .brand{font-size:.92rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none}
     .nav{display:flex;align-items:center;gap:28px;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase}
     .nav a{text-decoration:none;color:rgba(255,255,255,.84)}
     .nav a:hover{color:#fff}
     .menu-button{display:none;border:0;background:transparent;color:white;font-size:1.7rem;cursor:pointer;padding:0}
-    .hero{min-height:100svh;display:flex;align-items:flex-end;position:relative;color:white;background-color:#657064;background-image:linear-gradient(180deg,rgba(0,0,0,.03),rgba(0,0,0,.06) 38%,rgba(0,0,0,.35) 100%),url('https://images.unsplash.com/photo-1528164344705-47542687000d?auto=format&fit=crop&w=1800&q=80') ;background-position:center;background-size:cover}
+    .hero{min-height:100svh;display:flex;align-items:flex-end;position:relative;color:white;background-color:#657064;background-image:linear-gradient(180deg,rgba(0,0,0,.12),rgba(0,0,0,.38) 40%,rgba(0,0,0,.52) 100%),url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1800&q=80');background-position:center;background-size:cover}
     .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,15,12,.12),rgba(13,15,12,.5))}
     .hero-content{position:relative;z-index:2;padding:clamp(40px,8vw,110px) clamp(28px,7vw,120px) 94px;max-width:760px}
     .eyebrow{margin:0 0 18px;color:#d9d5cd;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700}
     h1{margin:0;font-size:clamp(3rem,8vw,7rem);line-height:.95;letter-spacing:-.06em}
     .hero-content p:last-child{margin:26px 0 0;font-size:1.25rem;max-width:540px;color:#f0efe9}
-    .section{padding:100px 5.5%}.section-inner{width:min(1120px,100%);margin:0 auto}.section-label{color:var(--muted);font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;margin:0 0 14px}.h2,h2{margin:0;font-size:clamp(2.2rem,5vw,4rem);line-height:1.08;letter-spacing:-.06em}
+    .section{padding:100px 5.5%}.section-inner{width:min(1120px,100%);margin:0 auto}.section-label{color:var(--muted);font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;margin:0 0 14px}
+    h2{margin:0;font-size:clamp(2.2rem,5vw,4rem);line-height:1.08;letter-spacing:-.06em}
     .red-rule{width:90px;height:2px;background:var(--accent);margin:24px 0 28px}
     .intro{max-width:760px;color:var(--muted);font-size:1.06rem}
     .facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:42px}
@@ -29,40 +33,177 @@
     .fact-number{display:block;color:var(--accent);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;margin-bottom:18px}
     .fact h3{margin:0 0 10px;font-size:1.45rem;line-height:1.2;letter-spacing:-.04em}
     .fact p{margin:0;color:var(--muted)}
-    .photo-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:54px 0 0}.photo-card{position:relative;min-width:0;height:clamp(280px,38vw,440px);margin:0;overflow:hidden;border:1px solid var(--line);background:#e4e1d9}
+    .photo-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:54px 0 0}
+    .photo-card{position:relative;min-width:0;height:clamp(280px,38vw,440px);margin:0;overflow:hidden;border:1px solid var(--line);background:#e4e1d9}
     .photo-card img{display:block;width:100%;height:100%;object-fit:cover;filter:saturate(1.02) contrast(1.03)}
     .photo-card figcaption{position:absolute;inset:auto 0 0 0;padding:18px 18px 16px;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.58));color:#fff;font-size:.9rem;letter-spacing:.08em;text-transform:uppercase}
-    .koi-feature{display:grid;grid-template-columns:1fr 1fr;min-height:50vh;background:var(--soft)}.koi-image{min-height:50vh;background:#25251f linear-gradient(rgba(0,0,0,.22),rgba(0,0,0,.22)),url('https://images.unsplash.com/photo-Dksk8szLRN0?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat}.koi-copy{display:flex;flex-direction:column;justify-content:center;padding:64px clamp(32px,7vw,100px)}.koi-copy p:last-child{max-width:460px;color:var(--muted)}
-    .split{display:grid;grid-template-columns:1fr 1fr;min-height:570px;background:var(--soft)}.split-image{min-height:420px;background:#d9d6ce url('https://images.unsplash.com/photo-DJZPv4wy1-Q?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat}.split-content{display:flex;align-items:center;padding:72px 8%}.split-content p{max-width:520px;color:var(--muted)}
-    .about-grid{display:grid;grid-template-columns:1fr;min-height:400px}.about-copy{display:flex;align-items:center;padding:72px 9%}.about-copy p{max-width:650px;color:var(--muted)}
-    .process-section{background:#f4f3ef}.process-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:38px}.process-card{padding:28px;background:white;border:1px solid #e5e2da;border-radius:10px;box-shadow:0 10px 20px rgba(28,31,25,.02)}.process-card span{display:block;color:var(--accent);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;margin-bottom:14px}.process-card h3{margin:0 0 10px;font-size:1.5rem;line-height:1.2;letter-spacing:-.04em}.process-card p{margin:0;color:var(--muted)}
-    .reference-list{display:grid;gap:16px;margin-top:32px}.reference-list a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:6px}
+    .koi-feature{display:grid;grid-template-columns:1fr 1fr;min-height:50vh;background:var(--soft)}
+    .koi-image{min-height:50vh;background:#25251f linear-gradient(rgba(0,0,0,.22),rgba(0,0,0,.22)),url('https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat}
+    .koi-copy{display:flex;flex-direction:column;justify-content:center;padding:64px clamp(32px,7vw,100px)}
+    .koi-copy p:last-child{max-width:460px;color:var(--muted)}
+    .split{display:grid;grid-template-columns:1fr 1fr;min-height:570px;background:var(--soft)}
+    .split-image{min-height:420px;background:#d9d6ce url('https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat}
+    .split-content{display:flex;align-items:center;padding:72px 8%}
+    .split-content p{max-width:520px;color:var(--muted)}
+    .about-grid{display:grid;grid-template-columns:1fr;min-height:400px}
+    .about-copy{display:flex;align-items:center;padding:72px 9%}
+    .about-copy p{max-width:650px;color:var(--muted)}
+    .process-section{background:#f4f3ef}.process-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:38px}.process-card{padding:28px;background:white;border:1px solid #e5e2da;border-radius:10px;box-shadow:0 10px 20px rgba(28,31,25,.02)}
+    .process-card span{display:block;color:var(--accent);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;margin-bottom:14px}
+    .process-card h3{margin:0 0 10px;font-size:1.5rem;line-height:1.2;letter-spacing:-.04em}
+    .process-card p{margin:0;color:var(--muted)}
+    .reference-list{display:grid;gap:16px;margin-top:32px}
+    .reference-list a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:6px}
     footer{display:flex;justify-content:space-between;gap:16px;padding:22px 5.5%;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem}
     footer a{text-decoration:none;color:var(--ink)}
-    @media(max-width:760px){:root{--header-height:64px}.site-header{padding:0 6%}.menu-button{display:block}.nav{display:none;position:absolute;top:var(--header-height);left:0;right:0;padding:20px 6% 26px;background:rgba(20,23,20,.96);flex-direction:column;align-items:flex-start;gap:18px}.nav.open{display:flex}.hero{min-height:82svh}.section{padding:80px 6%}.facts,.photo-gallery,.koi-feature,.split,.process-grid{grid-template-columns:1fr}.facts,.photo-gallery{gap:14px}.koi-copy,.split-content,.about-copy{padding:40px 6%}.fa ct,.quote,.split,.photo-gallery,.process-grid,.koi-feature{display:grid}.koi-image,.split-image{min-height:320px}.about-copy p{max-width:none}.footer{display:block}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important}}
+    @media(max-width:760px){:root{--header-height:64px}.site-header{padding:0 6%}.menu-button{display:block}.nav{display:none;position:absolute;top:var(--header-height);left:0;right:0;padding:20px 6% 26px;background:rgba(20,23,20,.96);flex-direction:column;align-items:flex-start;gap:18px}.nav.open{display:flex}.hero{min-height:82svh}.section{padding:80px 6%}.facts,.photo-gallery,.koi-feature,.split,.process-grid{grid-template-columns:1fr}.facts,.photo-gallery{gap:14px}.koi-copy,.split-content,.about-copy{padding:40px 6%}.koi-image,.split-image{min-height:320px}.about-copy p{max-width:none}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important}}
   </style>
 </head>
 <body>
-  <header class="site-header" id="header"><a class="brand" href="#home">Hayase Kobayashi</a><button class="menu-button" id="menuButton" aria-label="Open navigation" aria-expanded="false">☰</button><nav class="nav" id="nav" aria-label="Main navigation"><a href="#home">Home</a><a href="#about">About</a><a href="#earth-processes">Earth Processes</a><a href="#references">References</a></nav></header>
+  <header class="site-header" id="header">
+    <a class="brand" href="#home">Hayase Kobayashi</a>
+    <button class="menu-button" id="menuButton" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="nav" id="nav" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#earth-processes">Earth Processes</a>
+      <a href="#references">References</a>
+    </nav>
+  </header>
+
   <main>
-    <section class="hero" id="home"><div class="hero-content"><p class="eyebrow">Earth Science Academic Portfolio</p><h1>Explore the<br>Wonders of Japan</h1><p>A scientific exploration of the active island nation.</p></div></section>
-    <section class="section" id="overview"><div class="section-inner"><p class="section-label">01 — Overview</p><h2>A country shaped by<br>Earth and time</h2><div class="red-rule"></div><p class="intro">Japan’s landscapes tell a story of moving plates, powerful volcanoes, changing climates, and deep cultural history. Explore how Earth’s systems shape life across this remarkable island nation.</p>
-      <div class="facts"><article class="fact"><span class="fact-number">01</span><h3>History</h3><p>Japan has a rich history shaped by centuries of change, landscape, and human connection.</p></article><article class="fact"><span class="fact-number">02</span><h3>Tectonic Activity</h3><p>Earthquakes and volcanoes reveal the ongoing movement beneath the Japanese islands.</p></article><article class="fact"><span class="fact-number">03</span><h3>Culture</h3><p>From Hokkaido to Okinawa, climate and mountainous terrain influence regional life and culture.</p></article></div>
-      <div class="photo-gallery" aria-label="Japan photography gallery"><figure class="photo-card"><img src="https://images.unsplash.com/photo-nm58sLcSC8M?auto=format&fit=crop&w=1200&q=80" alt="A stack of large cups with Asian characters" loading="lazy"><figcaption>Everyday design</figcaption></figure><figure class="photo-card"><img src="https://images.unsplash.com/photo-hwLAR5lRhdM?auto=format&fit=crop&w=1200&q=80" alt="Bicycle parking in front of a building" loading="lazy"><figcaption>City life</figcaption></figure><figure class="photo-card"><img src="https://images.unsplash.com/photo-XrJwvezEzLk?auto=format&fit=crop&w=1200&q=80" alt="A large body of water with a red structure at its center" loading="lazy"><figcaption>Land and water</figcaption></figure></div>
-    </div></section>
-    <section class="koi-feature" aria-label="Koi fish photography"><div class="koi-image" role="img" aria-label="Black and orange koi fish swimming in water"></div><div class="koi-copy"><p class="section-label">02 — Symbolism</p><h2>Balance in motion</h2><div class="red-rule"></div><p>Japan’s rivers, gardens, and traditions reflect a deeper connection between nature and everyday life. In many communities, koi represent perseverance, transformation, and seasonal change.</p><p>These visual motifs echo the broader themes of the site: movement, resilience, and the relationship between land and culture.</p></div></section>
-    <section class="split" id="earth-processes"><div class="split-content"><div><p class="section-label">03 — Earth Processes</p><h2>Explore the Science</h2><div class="red-rule"></div><div class="process-grid"><article class="process-card" id="maps"><span>01 — PLACE</span><h3>Maps, Location &amp; Cartographers</h3><p>Maps help us understand Japan’s position in the Pacific and the varied landscapes created by uplift, deposition, and oceanic influence.</p></article><article class="process-card" id="tectonics"><span>02 — FORCES</span><h3>Plate Tectonics, Earthquakes &amp; Volcanoes</h3><p>Interactions between tectonic plates contribute to Japan’s earthquakes, volcanic arcs, and mountain building across the archipelago.</p></article><article class="process-card" id="weathering"><span>03 — CHANGE</span><h3>Weathering, Mass Wasting &amp; Erosion</h3><p>Rain, temperature changes, gravity, and flowing water break down rock and shape steep valleys, slopes, and sediment transport pathways.</p></article><article class="process-card" id="water"><span>04 — WATER</span><h3>Fluvial Processes, Oceans &amp; Coastlines</h3><p>Rivers transport sediment from highlands to the sea, while waves and coastal currents reshape beaches, deltas, and harbors.</p></article><article class="process-card" id="climate"><span>05 — CLIMATE</span><h3>Climate Controls, Biomes &amp; Climate Change</h3><p>Latitude, elevation, seasonal winds, and ocean currents influence Japan’s climate zones, ecosystems, and vulnerability to environmental change.</p></article></div></div></div><div class="split-image" role="img" aria-label="A scenic view of an urban area with layered texture and atmospheric lighting"></div></section>
-    <section class="about-grid" id="about"><div class="about-copy"><div><p class="section-label">04 — Overview</p><h2>My connection<br>to Japan</h2><div class="red-rule"></div><p>I chose Japan because it is my country and is situated at the convergence of four major tectonic plates; Japan is one of the most geologically dynamic nations on Earth.</p><p>Japan has a long history of isolation and rapid change. As an island nation, Japan developed its own political and social systems.</p><p>Japan has one of the largest economies in the world and is known for its advanced technology. Because Japan has limited natural resources, it depends on industries such as car production, manufacturing, and technology.</p><p>Japanese culture values harmony, respect, and nature. Traditional arts include tea ceremonies, calligraphy, and wooden buildings.</p></div></div></section>
-    <section class="section process-section"><div class="section-inner"><p class="section-label">05 — Field Notes</p><h2>Earth in motion</h2><div class="red-rule"></div><div class="process-grid"><article class="process-card" id="maps"><span>01 — PLACE</span><h3>Maps, Location &amp; Cartographers</h3><p>Maps help us understand Japan’s position in the Pacific and the varied landscapes created by uplift, deposition, and oceanic influence.</p></article><article class="process-card" id="tectonics"><span>02 — FORCES</span><h3>Plate Tectonics, Earthquakes &amp; Volcanoes</h3><p>Interactions between tectonic plates contribute to Japan’s earthquakes, volcanic arcs, and mountain building across the archipelago.</p></article><article class="process-card" id="weathering"><span>03 — CHANGE</span><h3>Weathering, Mass Wasting &amp; Erosion</h3><p>Rain, temperature changes, gravity, and flowing water break down rock and shape steep valleys, slopes, and sediment transport pathways.</p></article><article class="process-card" id="water"><span>04 — WATER</span><h3>Fluvial Processes, Oceans &amp; Coastlines</h3><p>Rivers transport sediment from highlands to the sea, while waves and coastal currents reshape beaches, deltas, and harbors.</p></article><article class="process-card" id="climate"><span>05 — CLIMATE</span><h3>Climate Controls, Biomes &amp; Climate Change</h3><p>Latitude, elevation, seasonal winds, and ocean currents influence Japan’s climate zones, ecosystems, and vulnerability to environmental change.</p></article></div></div></section>
-    <section class="section references" id="references"><div class="section-inner"><p class="section-label">06 — Further Reading</p><h2>References</h2><div class="red-rule"></div><p>Use these organizations as starting points for research. Add the specific articles, maps, and publication details you used for your project.</p><div class="reference-list"><a href="https://www.jma.go.jp/jma/en/" target="_blank" rel="noopener noreferrer">Japan Meteorological Agency — Earthquakes, volcanoes, and climate information</a><a href="https://www.gsi.go.jp/ENGLISH/" target="_blank" rel="noopener noreferrer">Geospatial Information Authority of Japan — Maps and geographic information</a><a href="https://www.usgs.gov/" target="_blank" rel="noopener noreferrer">United States Geological Survey — Earth science research and resources</a><a href="https://volcano.si.edu/" target="_blank" rel="noopener noreferrer">Smithsonian Global Volcanism Program — Volcano information</a></div></div></section>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">Earth Science Academic Portfolio</p>
+        <h1>Explore the<br>Wonders of Japan</h1>
+        <p>A scientific exploration of the active island nation.</p>
+      </div>
+    </section>
+
+    <section class="section" id="overview">
+      <div class="section-inner">
+        <p class="section-label">01 — Overview</p>
+        <h2>A country shaped by<br>Earth and time</h2>
+        <div class="red-rule"></div>
+        <p class="intro">Japan’s landscapes tell a story of moving plates, powerful volcanoes, changing climates, and deep cultural history. Explore how Earth’s systems shape life across this remarkable island nation.</p>
+
+        <div class="facts">
+          <article class="fact"><span class="fact-number">01</span><h3>History</h3><p>Japan has a rich history shaped by centuries of change, landscape, and human connection.</p></article>
+          <article class="fact"><span class="fact-number">02</span><h3>Tectonic Activity</h3><p>Earthquakes and volcanoes reveal the ongoing movement beneath the Japanese islands.</p></article>
+          <article class="fact"><span class="fact-number">03</span><h3>Culture</h3><p>From Hokkaido to Okinawa, climate and mountainous terrain influence regional life and culture.</p></article>
+        </div>
+
+        <div class="photo-gallery" aria-label="Japan photography gallery">
+          <figure class="photo-card"><img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80" alt="A stack of large cups with Asian characters" loading="lazy"><figcaption>Everyday design</figcaption></figure>
+          <figure class="photo-card"><img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=1200&q=80" alt="Bicycle parking in front of a building" loading="lazy"><figcaption>City life</figcaption></figure>
+          <figure class="photo-card"><img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&q=80" alt="A large body of water with a red structure at its center" loading="lazy"><figcaption>Land and water</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="koi-feature" aria-label="Koi fish photography">
+      <div class="koi-image" role="img" aria-label="Black and orange koi fish swimming in water"></div>
+      <div class="koi-copy">
+        <p class="section-label">02 — Symbolism</p>
+        <h2>Balance in motion</h2>
+        <div class="red-rule"></div>
+        <p>Japan’s rivers, gardens, and traditions reflect a deeper connection between nature and everyday life. In many communities, koi represent perseverance, transformation, and seasonal change.</p>
+        <p>These visual motifs echo the broader themes of the site: movement, resilience, and the relationship between land and culture.</p>
+      </div>
+    </section>
+
+    <section class="split" id="earth-processes">
+      <div class="split-content">
+        <div>
+          <p class="section-label">03 — Earth Processes</p>
+          <h2>Explore the Science</h2>
+          <div class="red-rule"></div>
+          <div class="process-grid">
+            <article class="process-card" id="maps"><span>01 — PLACE</span><h3>Maps, Location &amp; Cartographers</h3><p>Maps help us understand Japan’s position in the Pacific and the varied landscapes created by uplift, deposition, and oceanic influence.</p></article>
+            <article class="process-card" id="tectonics"><span>02 — FORCES</span><h3>Plate Tectonics, Earthquakes &amp; Volcanoes</h3><p>Interactions between tectonic plates contribute to Japan’s earthquakes, volcanic arcs, and mountain building across the archipelago.</p></article>
+            <article class="process-card" id="weathering"><span>03 — CHANGE</span><h3>Weathering, Mass Wasting &amp; Erosion</h3><p>Rain, temperature changes, gravity, and flowing water break down rock and shape steep valleys, slopes, and sediment transport pathways.</p></article>
+            <article class="process-card" id="water"><span>04 — WATER</span><h3>Fluvial Processes, Oceans &amp; Coastlines</h3><p>Rivers transport sediment from highlands to the sea, while waves and coastal currents reshape beaches, deltas, and harbors.</p></article>
+            <article class="process-card" id="climate"><span>05 — CLIMATE</span><h3>Climate Controls, Biomes &amp; Climate Change</h3><p>Latitude, elevation, seasonal winds, and ocean currents influence Japan’s climate zones, ecosystems, and vulnerability to environmental change.</p></article>
+          </div>
+        </div>
+      </div>
+      <div class="split-image" role="img" aria-label="A scenic view of an urban area with layered texture and atmospheric lighting"></div>
+    </section>
+
+    <section class="about-grid" id="about">
+      <div class="about-copy">
+        <div>
+          <p class="section-label">04 — Overview</p>
+          <h2>My connection<br>to Japan</h2>
+          <div class="red-rule"></div>
+          <p>I chose Japan because it is my country and is situated at the convergence of four major tectonic plates; Japan is one of the most geologically dynamic nations on Earth.</p>
+          <p>Japan has a long history of isolation and rapid change. As an island nation, Japan developed its own political and social systems.</p>
+          <p>Japan has one of the largest economies in the world and is known for its advanced technology. Because Japan has limited natural resources, it depends on industries such as car production, manufacturing, and technology.</p>
+          <p>Japanese culture values harmony, respect, and nature. Traditional arts include tea ceremonies, calligraphy, and wooden buildings.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process-section">
+      <div class="section-inner">
+        <p class="section-label">05 — Field Notes</p>
+        <h2>Earth in motion</h2>
+        <div class="red-rule"></div>
+        <div class="process-grid">
+          <article class="process-card" id="maps-2"><span>01 — PLACE</span><h3>Maps, Location &amp; Cartographers</h3><p>Maps help us understand Japan’s position in the Pacific and the varied landscapes created by uplift, deposition, and oceanic influence.</p></article>
+          <article class="process-card" id="tectonics-2"><span>02 — FORCES</span><h3>Plate Tectonics, Earthquakes &amp; Volcanoes</h3><p>Interactions between tectonic plates contribute to Japan’s earthquakes, volcanic arcs, and mountain building across the archipelago.</p></article>
+          <article class="process-card" id="weathering-2"><span>03 — CHANGE</span><h3>Weathering, Mass Wasting &amp; Erosion</h3><p>Rain, temperature changes, gravity, and flowing water break down rock and shape steep valleys, slopes, and sediment transport pathways.</p></article>
+          <article class="process-card" id="water-2"><span>04 — WATER</span><h3>Fluvial Processes, Oceans &amp; Coastlines</h3><p>Rivers transport sediment from highlands to the sea, while waves and coastal currents reshape beaches, deltas, and harbors.</p></article>
+          <article class="process-card" id="climate-2"><span>05 — CLIMATE</span><h3>Climate Controls, Biomes &amp; Climate Change</h3><p>Latitude, elevation, seasonal winds, and ocean currents influence Japan’s climate zones, ecosystems, and vulnerability to environmental change.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section references" id="references">
+      <div class="section-inner">
+        <p class="section-label">06 — Further Reading</p>
+        <h2>References</h2>
+        <div class="red-rule"></div>
+        <p>Use these organizations as starting points for research. Add the specific articles, maps, and publication details you used for your project.</p>
+        <div class="reference-list">
+          <a href="https://www.jma.go.jp/jma/en/" target="_blank" rel="noopener noreferrer">Japan Meteorological Agency — Earthquakes, volcanoes, and climate information</a>
+          <a href="https://www.gsi.go.jp/ENGLISH/" target="_blank" rel="noopener noreferrer">Geospatial Information Authority of Japan — Maps and geographic information</a>
+          <a href="https://www.usgs.gov/" target="_blank" rel="noopener noreferrer">United States Geological Survey — Earth science research and resources</a>
+          <a href="https://volcano.si.edu/" target="_blank" rel="noopener noreferrer">Smithsonian Global Volcanism Program — Volcano information</a>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer><span>Earth Science Academic Portfolio · Hayase Kobayashi</span><span>Photography: <a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">Unsplash</a></span></footer>
+
+  <footer>
+    <span>Earth Science Academic Portfolio · Hayase Kobayashi</span>
+    <span>Photography: <a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">Unsplash</a></span>
+  </footer>
+
   <script>
-    const header=document.getElementById('header'),menuButton=document.getElementById('menuButton'),nav=document.getElementById('nav');
-    function updateHeader(){header.classList.toggle('scrolled',window.scrollY>24)}
-    updateHeader();window.addEventListener('scroll',updateHeader,{passive:true});
-    menuButton.addEventListener('click',()=>{const isOpen=nav.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(isOpen));menuButton.setAttribute('aria-label',isOpen?'Close navigation':'Open navigation');});
-    nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('open');menuButton.setAttribute('aria-expanded','false');menuButton.setAttribute('aria-label','Open navigation');}));
+    const header = document.getElementById('header');
+    const menuButton = document.getElementById('menuButton');
+    const nav = document.getElementById('nav');
+
+    function updateHeader() {
+      header.classList.toggle('scrolled', window.scrollY > 24);
+    }
+
+    updateHeader();
+    window.addEventListener('scroll', updateHeader, { passive: true });
+    menuButton.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', String(isOpen));
+      menuButton.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+    });
+    nav.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.setAttribute('aria-label', 'Open navigation');
+      });
+    });
   </script>
 </body>
 </html>
